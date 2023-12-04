@@ -234,4 +234,4 @@ st.sidebar.markdown('---')
 st.sidebar.subheader('Additional Information')
 st.sidebar.write('For more information, please contact me at leocorbur@gmail.com or via ' 
                  '[LinkedIn](https://www.linkedin.com/in/leonelcortez/). ' 
-                 'Also, I invite you see my lastest projest on [GitHub](https://github.com/leocorbur).')
+                 'Also, I invite you to see my lastest projects on [GitHub](https://github.com/leocorbur).')
