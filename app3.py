@@ -213,14 +213,21 @@ if u_file is not None:
     df_filtered, selected_columns = explore_data(df)
 else:
     st.warning('Please upload a LAS file to begin.')
+    df_filtered = None  # Set df_filtered to None if the file is not uploaded
 
 # Navigation options
 if options == 'Explore Data':
     pass  # No need to explicitly call the function as it's already invoked within the condition above
 elif options == 'Box Plot':
-    boxplot(df_filtered)
+    if u_file is None:
+        st.warning('Please upload a LAS file to view Box Plot.')
+    else:
+        boxplot(df_filtered)
 elif options == 'Log Data Viz':
-    display_log_data_viz(df_filtered)
+    if u_file is None:
+        st.warning('Please upload a LAS file to view Log Data Viz.')
+    else:
+        display_log_data_viz(df_filtered)
 
 # Footer with additional information or links
 st.sidebar.markdown('---')
